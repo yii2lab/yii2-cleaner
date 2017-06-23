@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2lab\cleaner;
+namespace yii2module\cleaner;
 
 use yii\base\Module as YiiModule;
 

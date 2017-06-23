@@ -1,9 +1,9 @@
 <?php
 
-namespace yii2lab\cleaner\controllers;
+namespace yii2module\cleaner\controllers;
 
 use woop\extension\console\yii\console\Controller;
-use yii2lab\cleaner\helpers\ClearHelper;
+use yii2module\cleaner\helpers\ClearHelper;
 use woop\extension\console\helpers\Output;
 use woop\extension\console\helpers\input\Select;
 
