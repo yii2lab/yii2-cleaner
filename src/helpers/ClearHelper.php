@@ -3,8 +3,8 @@
 namespace yii2module\cleaner\helpers;
 
 use Yii;
-use woop\foundation\yii\helpers\FileHelper;
-use woop\foundation\helpers\Helper;
+use yii2lab\helpers\yii\FileHelper;
+use yii2lab\helpers\Helper;
 
 class ClearHelper
 {
