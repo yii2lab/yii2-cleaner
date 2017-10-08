@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2module\cleaner\helpers;
+namespace yii2module\cleaner\domain\helpers;
 
 use Yii;
 use yii2lab\helpers\yii\FileHelper;

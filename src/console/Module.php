@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2module\cleaner;
+namespace yii2module\cleaner\console;
 
 use yii\base\Module as YiiModule;
 
