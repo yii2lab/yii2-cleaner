@@ -5,7 +5,7 @@ use Yii;
 use yii\web\Controller;
 use yii2module\cleaner\admin\models\forms\CashForm;
 use yii2module\cleaner\admin\models\Cash;
-use yii2lab\notify\widgets\Alert;
+use yii2lab\notify\domain\widgets\Alert;
 
 class CacheController extends Controller
 {

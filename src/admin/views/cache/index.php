@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
-//use yii2lab\notify\widgets\Alert;
+//use yii2lab\notify\domain\widgets\Alert;
 use kartik\widgets\SwitchInput;
 
 /* @var $model backend\models\forms\CashForm */
