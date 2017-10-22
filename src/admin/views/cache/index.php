@@ -1,10 +1,10 @@
 <?php
 use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
-//use yii2lab\notify\domain\widgets\Alert;
-use kartik\widgets\SwitchInput;
+use yii2lab\widgets\SwitchInput;
+use yii2module\cleaner\admin\models\forms\CashForm;
 
-/* @var $model backend\models\forms\CashForm */
+/* @var $model CashForm */
 
 $this->title = t('cleaner/cache','title');
 
@@ -18,22 +18,10 @@ $this->title = t('cleaner/cache','title');
 			<?/* = Alert::widget([
 				'delay' => 5000,
 			]); */?>
-			
-			<?php
-				$pluginOptions = [
-					'pluginOptions' => [
-						'handleWidth' => 50,
-						'onText' => t('yii', 'Yes'),
-						'offText' => t('yii', 'No'),
-						'onColor' => 'success',
-						'offColor' => 'danger',
-					]
-				];
-			?>
-			
-			<?= $form->field($model, 'backend_app')->widget(SwitchInput::classname(), $pluginOptions);?>
-			<?= $form->field($model, 'frontend_app')->widget(SwitchInput::classname(), $pluginOptions);?>
-			<?= $form->field($model, 'api_app')->widget(SwitchInput::classname(), $pluginOptions);?>
+
+			<?= $form->field($model, 'backend_app')->widget(SwitchInput::classname(), SwitchInput::yesNoConfig());?>
+			<?= $form->field($model, 'frontend_app')->widget(SwitchInput::classname(), SwitchInput::yesNoConfig());?>
+			<?= $form->field($model, 'api_app')->widget(SwitchInput::classname(), SwitchInput::yesNoConfig());?>
 		</div>
 		<div class="box-footer">
 			<?= Html::submitButton('<i class="fa fa-trash-o"></i> '.t('main','clear'), ['class' => 'btn btn-danger', 'name' => 'clear-button']);?>
