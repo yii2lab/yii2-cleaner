@@ -1,10 +1,9 @@
 <?php
+
+use common\enums\app\AppEnum;
 use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
 use yii2lab\widgets\SwitchInput;
-use yii2module\cleaner\admin\models\forms\CashForm;
-
-/* @var $model CashForm */
 
 $this->title = t('cleaner/cache','title');
 
@@ -15,13 +14,11 @@ $this->title = t('cleaner/cache','title');
 		'options' => ['class' => 'form-vertical'],
 	]);?>
 		<div class="box-body">
-			<?/* = Alert::widget([
-				'delay' => 5000,
-			]); */?>
-
-			<?= $form->field($model, 'backend_app')->widget(SwitchInput::classname(), SwitchInput::yesNoConfig());?>
-			<?= $form->field($model, 'frontend_app')->widget(SwitchInput::classname(), SwitchInput::yesNoConfig());?>
-			<?= $form->field($model, 'api_app')->widget(SwitchInput::classname(), SwitchInput::yesNoConfig());?>
+			<?php
+			foreach(AppEnum::all() as $app) {
+				echo $form->field($model, $app)->widget(SwitchInput::classname(), SwitchInput::yesNoConfig());
+			}
+			?>
 		</div>
 		<div class="box-footer">
 			<?= Html::submitButton('<i class="fa fa-trash-o"></i> '.t('main','clear'), ['class' => 'btn btn-danger', 'name' => 'clear-button']);?>
