@@ -2,9 +2,9 @@
 
 namespace yii2module\cleaner\domain\helpers;
 
-use Yii;
+use common\enums\app\AppEnum;
+use yii\base\InvalidParamException;
 use yii2lab\helpers\yii\FileHelper;
-use yii2lab\helpers\Helper;
 
 class ClearHelper
 {
@@ -12,7 +12,7 @@ class ClearHelper
 	public static function run($names)
 	{
 		$result = [];
-		$apps = Helper::getApps();
+		$apps = AppEnum::values();
 		foreach($apps as $app) {
 			foreach($names as $name) {
 				$dir = $app . DS . $name;
@@ -35,11 +35,7 @@ class ClearHelper
 		$fileList = self::findFiles($dir, $options);
 		foreach($fileList as $file) {
 			$file = FileHelper::normalizePath($file);
-			if(is_dir($file)) {
-				FileHelper::removeDirectory(ROOT_DIR . DS . $file);
-			} else {
-				unlink(ROOT_DIR . DS . $file);
-			}
+			FileHelper::remove($file);
 			$result[] = $file;
 		}
 		return $result;
