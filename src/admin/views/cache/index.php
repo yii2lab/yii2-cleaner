@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
 use yii2lab\widgets\SwitchInput;
 
-$this->title = t('cleaner/cache','title');
+$this->title = Yii::t('cleaner/cache','title');
 
 ?>
 
