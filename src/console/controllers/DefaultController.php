@@ -7,9 +7,15 @@ use yii2module\cleaner\domain\helpers\ClearHelper;
 use yii2lab\console\helpers\Output;
 use yii2lab\console\helpers\input\Select;
 
+/**
+ * Cleaner module.
+ */
 class DefaultController extends Controller
 {
 	
+	/**
+	 * Clear assets, runtime, cache, test output
+	 */
 	public function actionIndex($option = null)
 	{
 		$allNames = [
