@@ -18,6 +18,7 @@ class DefaultController extends Controller
 	 */
 	public function actionIndex($option = null)
 	{
+		// todo: вынести в конфиг домена
 		$allNames = [
 			'web/assets',
 			'runtime',
