@@ -2,13 +2,11 @@
 
 namespace yii2module\cleaner\admin\helpers;
 
-// todo: отрефакторить - сделать нормальный интерфейс и родителя
-
 use common\enums\rbac\PermissionEnum;
 
 class Menu {
 	
-	static function getMenu() {
+	public function toArray() {
 		return [
 			'label' => ['cleaner/cache', 'cache'],
 			'url' => 'cleaner/cache',
