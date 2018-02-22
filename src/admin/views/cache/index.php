@@ -16,7 +16,7 @@ $this->title = Yii::t('cleaner/cache','title');
 		<div class="box-body">
 			<?php
 			foreach(AppEnum::all() as $app) {
-				echo $form->field($model, $app)->widget(SwitchInput::classname(), SwitchInput::yesNoConfig());
+				echo $form->field($model, $app)->widget(SwitchInput::class, SwitchInput::yesNoConfig());
 			}
 			?>
 		</div>
