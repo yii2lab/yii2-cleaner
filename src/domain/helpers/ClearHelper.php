@@ -3,6 +3,7 @@
 namespace yii2module\cleaner\domain\helpers;
 
 use common\enums\app\AppEnum;
+use yii\base\InvalidArgumentException;
 use yii2lab\helpers\yii\FileHelper;
 
 class ClearHelper
@@ -43,7 +44,7 @@ class ClearHelper
 	private static function findFiles($dir, $options = [])
 	{
 	   if (!is_dir($dir)) {
-			throw new \InvalidArgumentException("The dir argument must be a directory: $dir");
+			throw new InvalidArgumentException("The dir argument must be a directory: $dir");
 		}
 		 $dir = rtrim($dir, DIRECTORY_SEPARATOR);
 		if (!isset($options['basePath'])) {
@@ -54,7 +55,7 @@ class ClearHelper
 		$list = [];
 		$handle = opendir($dir);
 		if ($handle === false) {
-			throw new \InvalidArgumentException("Unable to open directory: $dir");
+			throw new InvalidArgumentException("Unable to open directory: $dir");
 		}
 		while (($file = readdir($handle)) !== false) {
 			if ($file === '.' || $file === '..') {
