@@ -2,7 +2,7 @@
 
 namespace yii2module\cleaner\console\controllers;
 
-use yii2lab\console\yii\console\Controller;
+use yii2lab\console\base\Controller;
 use yii2module\cleaner\domain\helpers\ClearHelper;
 use yii2lab\console\helpers\Output;
 use yii2lab\console\helpers\input\Select;
