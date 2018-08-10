@@ -2,8 +2,8 @@
 
 namespace yii2module\cleaner\admin\helpers;
 
-use common\enums\rbac\PermissionEnum;
 use yii2lab\extension\menu\interfaces\MenuInterface;
+use yii2module\cleaner\domain\enums\CleanerPermissionEnum;
 
 class Menu implements MenuInterface {
 	
@@ -13,7 +13,7 @@ class Menu implements MenuInterface {
 			'url' => 'cleaner/cache',
 			'module' => 'cleaner',
 			//'icon' => 'trash-o',
-			'access' => PermissionEnum::CLEANER_MANAGE,
+			'access' => CleanerPermissionEnum::MANAGE,
 		];
 	}
 
