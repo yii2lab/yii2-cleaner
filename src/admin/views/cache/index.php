@@ -3,7 +3,7 @@
 use common\enums\app\AppEnum;
 use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
-use yii2lab\widgets\SwitchInput;
+use yii2lab\extension\widget\SwitchInput;
 
 $this->title = Yii::t('cleaner/cache','title');
 
