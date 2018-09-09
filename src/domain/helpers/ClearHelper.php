@@ -4,7 +4,7 @@ namespace yii2module\cleaner\domain\helpers;
 
 use common\enums\app\AppEnum;
 use yii\base\InvalidArgumentException;
-use yii2lab\helpers\yii\FileHelper;
+use yii2lab\extension\yii\helpers\FileHelper;
 
 class ClearHelper
 {
