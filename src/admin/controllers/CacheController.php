@@ -28,9 +28,9 @@ class CacheController extends Controller
 				}
 			}
 			if ($success) {
-				Yii::$domain->navigation->alert->create(['cleaner/cache', 'cache_successfully_flushed'], Alert::TYPE_SUCCESS);
+				\App::$domain->navigation->alert->create(['cleaner/cache', 'cache_successfully_flushed'], Alert::TYPE_SUCCESS);
 			} else {
-				Yii::$domain->navigation->alert->create(['cleaner/cache', 'select_cache_section_to_flush'], Alert::TYPE_DANGER);
+				\App::$domain->navigation->alert->create(['cleaner/cache', 'select_cache_section_to_flush'], Alert::TYPE_DANGER);
 			}
 			return $this->refresh();
 		}
