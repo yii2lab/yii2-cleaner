@@ -2,7 +2,7 @@
 
 namespace yii2module\cleaner\domain\helpers;
 
-use common\enums\app\AppEnum;
+use yii2lab\app\domain\enums\AppEnum;
 use yii\base\InvalidArgumentException;
 use yii2lab\extension\yii\helpers\FileHelper;
 

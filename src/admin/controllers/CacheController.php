@@ -1,7 +1,7 @@
 <?php
 namespace yii2module\cleaner\admin\controllers;
 
-use common\enums\app\AppEnum;
+use yii2lab\app\domain\enums\AppEnum;
 use Yii;
 use yii\web\Controller;
 use yii2lab\validator\DynamicModel;
